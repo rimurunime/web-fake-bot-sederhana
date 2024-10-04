@@ -1,0 +1,83 @@
+html, body, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #334155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", system-ui;
+}
+
+.content-1 {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 3px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px #4f46e5;
+    text-transform: capitalize;
+}
+
+.content-1 input {
+    padding: 11px;
+    margin-top: 8px;
+    color: #4f46e5;
+    min-width: 250px;
+}
+
+.content-1 input:focus {
+    outline-color: #4f46e5;
+}
+
+.content-1 button {
+    padding: 12px 15px;
+    background-color: #4ade80;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.content-1 button:hover {
+    background-color: #22c55e;
+}
+
+.content-1 button:active {
+    background-color: #16a34a;
+}
+
+.loading {
+    /* background-color: #4f46e5; */
+    display: none;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 46%;
+    left: 48%;
+    border-top: 15px solid #4f46e5;
+    border-radius: 50%;
+    animation: 1.1s spin infinite;
+    z-index: 999;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* tampilan mobile */
+@media screen and (max-width: 476px) {
+    .loading {
+        top: 44%;
+        left: 39%;
+    }
+}
